@@ -120,14 +120,19 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
+
 =======
+
 # onenote-website-of-schthings
 一站式查看需要用的schthings
+
 >>>>>>> dde1ad8a6c67a5e928345aa3708276f70f690b0a
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
-"# onenote-website-of-schthings"  git init git add . git commit -m "first commit" git branch -M main git remote add origin https://github.com/LinXi-ovo/onenote-website-of-schthings.git git push -u origin main
+"# onenote-website-of-schthings"
+>>>>>>> git init git add . git commit -m "first commit" git branch -M main git remote add origin https://github.com/LinXi-ovo/onenote-website-of-schthings.git git push -u origin main
+>>>>>>> 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
