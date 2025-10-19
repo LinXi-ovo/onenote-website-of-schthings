@@ -61,19 +61,19 @@
       <div class="stats-container">
         <div class="stat-item">
           <div class="stat-number">500+</div>
-          <div class="stat-label">活跃用户</div>
+          <div class="stat-label">活跃用户(未来)</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">100+</div>
-          <div class="stat-label">线上作业</div>
+          <div class="stat-label">线上作业(未来)</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">20+</div>
-          <div class="stat-label">合作社团</div>
+          <div class="stat-label">合作社团(画饼)</div>
         </div>
         <div class="stat-item">
           <div class="stat-number">30+</div>
-          <div class="stat-label">年度竞赛</div>
+          <div class="stat-label">年度竞赛(画饼)</div>
         </div>
       </div>
     </section>

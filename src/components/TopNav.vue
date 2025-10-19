@@ -43,7 +43,6 @@ export default {
         { id: 4, text: '社团招新', url: '#', pageName: "ClubRecruit" },
         { id: 5, text: '最近比赛', url: '#', pageName: "RecentCompetition" },
         { id: 6, text: '计科3课表查询', url: '#', pageName: "ClassSchedule" },
-        { id: 7, text: 'DevTest', url: '#', pageName: "DevTest" },
         { id: 999, text: '联系我们', url: '#', pageName: "ContactUs" }
       ]
     };

@@ -60,7 +60,7 @@ export default {
     TodoList: () => import('./components/TodoList.vue'),
     HomePage: () => import('./components/HomePage.vue'),
     ContactUs: () => import('./components/ContactUs.vue'),
-    devTest: () => import('./components/DevTest.vue'),
+
     ClubRecruit: () => import('./components/ClubRecruit.vue'),
     ClassSchedule: () => import('./components/ClassSchedule.vue'),
     RecentCompetition: () => import('./components/RecentCompetition.vue')
