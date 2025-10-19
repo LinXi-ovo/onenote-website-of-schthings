@@ -8,37 +8,20 @@
       <form @submit.prevent="submitForm">
         <div class="form-group" :class="{ 'has-error': errors.name }">
           <label for="name">该如何称呼您？</label>
-          <input 
-            type="text" 
-            id="name" 
-            v-model="formData.name" 
-            @blur="validateField('name')"
-            :class="{ 'error': errors.name }"
-            required
-          >
+          <input type="text" id="name" v-model="formData.name" @blur="validateField('name')"
+            :class="{ 'error': errors.name }" required>
           <span v-if="errors.name" class="error-text">{{ errors.name }}</span>
         </div>
         <div class="form-group" :class="{ 'has-error': errors.email }">
           <label for="email">邮箱</label>
-          <input 
-            type="email" 
-            id="email" 
-            v-model="formData.email" 
-            @blur="validateField('email')"
-            :class="{ 'error': errors.email }"
-            required
-          >
+          <input type="email" id="email" v-model="formData.email" @blur="validateField('email')"
+            :class="{ 'error': errors.email }" required>
           <span v-if="errors.email" class="error-text">{{ errors.email }}</span>
         </div>
         <div class="form-group" :class="{ 'has-error': errors.message }">
           <label for="message">留言</label>
-          <textarea 
-            id="message" 
-            v-model="formData.message" 
-            @blur="validateField('message')"
-            :class="{ 'error': errors.message }"
-            required
-          ></textarea>
+          <textarea id="message" v-model="formData.message" @blur="validateField('message')"
+            :class="{ 'error': errors.message }" required></textarea>
           <span v-if="errors.message" class="error-text">{{ errors.message }}</span>
         </div>
         <div class="form-actions">
@@ -58,6 +41,7 @@
     <div class="contact-info">
       <h3>联系方式</h3>
       <p>邮箱：2809837498@qq.com</p>
+      <p>github仓库（喜欢的给我点个star吧，你的每一个star都是我继续前进的动力！）：https://github.com/LinXi-ovo/onenote-website-of-schthings</p>
     </div>
   </div>
 </template>
