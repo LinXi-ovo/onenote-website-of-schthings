@@ -11,15 +11,12 @@
         </thead>
         <tbody>
           <tr v-for="slot in timeSlots" :key="slot.id">
-            <td class="time-slot">
-              <div>{{ slot.time }}</div>
-              <div class="time-range">{{ slot.timeRange }}</div>
-            </td>
+            <td class="time-slot">{{ slot.time }}</td>
             <td v-for="day in 7" :key="day" class="course-cell">
-              <div v-for="course in getFirstSlotCourses(slot.id, day)"
-                   :key="course.id"
+              <div v-for="course in getCoursesForSlot(slot.id, day)" 
+                   :key="course.id" 
                    class="course-item"
-                   :style="{ backgroundColor: course.color, height: calculateCourseHeight(course) }">
+                   :style="{ backgroundColor: course.color }">
                 <div class="course-name">{{ course.name }}</div>
                 <div class="course-info">{{ course.info }}</div>
                 <div class="course-teacher">{{ course.teacher }}</div>
@@ -40,71 +37,30 @@ export default {
   data() {
     return {
       schedule: weekSchedule,
-      weekDates: [],
       timeSlots: [
-        { id: 1, time: '第01节', timeRange: '08:30 - 09:15' },
-        { id: 2, time: '第02节', timeRange: '09:20 - 10:05' },
-        { id: 3, time: '第03节', timeRange: '10:25 - 11:10' },
-        { id: 4, time: '第04节', timeRange: '11:15 - 12:00' },
-        { id: 5, time: '第05节', timeRange: '13:50 - 14:35' },
-        { id: 6, time: '第06节', timeRange: '14:40 - 15:25' },
-        { id: 7, time: '第07节', timeRange: '15:30 - 16:15' },
-        { id: 8, time: '第08节', timeRange: '16:30 - 17:15' },
-        { id: 9, time: '第09节', timeRange: '17:20 - 18:05' },
-        { id: 10, time: '第10节', timeRange: '18:30 - 19:15' },
-        { id: 11, time: '第11节', timeRange: '19:20 - 20:05' },
-        { id: 12, time: '第12节', timeRange: '20:10 - 20:55' },
-        { id: 13, time: '第13节', timeRange: '21:10 - 21:55' }
+        { id: 1, time: '第01节' },
+        { id: 2, time: '第02节' },
+        { id: 3, time: '第03节' },
+        { id: 4, time: '第04节' },
+        { id: 5, time: '第05节' },
+        { id: 6, time: '第06节' },
+        { id: 7, time: '第07节' },
+        { id: 8, time: '第08节' },
+        { id: 9, time: '第09节' },
+        { id: 10, time: '第10节' },
+        { id: 11, time: '第11节' },
+        { id: 12, time: '第12节' },
+        { id: 13, time: '第13节' },
+        { id: 14, time: '第14节' }
       ]
     }
   },
-  created() {
-    this.generateWeekDates();
-  },
   methods: {
-    getFirstSlotCourses(slotId, day) {
-      // 只返回在当前时间槽开始的课程，避免重复显示连堂课程
+    getCoursesForSlot(slotId, day) {
       return this.schedule.courses.filter(course => {
-        const [start] = course.timeSlot.split('-').map(Number);
-        return course.day === day && slotId === start;
+        const [start, end] = course.timeSlot.split('-').map(Number);
+        return course.day === day && slotId >= start && slotId <= end;
       });
-    },
-    // 计算课程高度，考虑连堂情况
-    calculateCourseHeight(course) {
-      const [start, end] = course.timeSlot.split('-').map(Number);
-      const slotCount = end - start + 1;
-      return `${slotCount * 60}px`; // 每个时间槽60px高
-    },
-    // 生成一周的日期
-    generateWeekDates() {
-      // 如果weekSchedule中已有起始日期，使用它；否则使用当前周的周一
-      const startDate = this.schedule.header.startDate ? 
-        new Date(this.schedule.header.startDate) : 
-        this.getMonday(new Date());
-      
-      this.weekDates = [];
-      const weekDays = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
-      
-      for (let i = 0; i < 7; i++) {
-        const date = new Date(startDate);
-        date.setDate(startDate.getDate() + i);
-        
-        // 格式化为"月/日"格式
-        const month = date.getMonth() + 1;
-        const day = date.getDate();
-        const formattedDate = `${month}/${day}`;
-        
-        this.weekDates.push(`${weekDays[i]} ${formattedDate}`);
-      }
-      
-      // 更新schedule中的dates
-      this.schedule.header.dates = this.weekDates;
-    },
-    // 获取给定日期所在周的周一
-    getMonday(date) {
-      const day = date.getDay();
-      const diff = date.getDate() - day + (day === 0 ? -6 : 1);
-      return new Date(date.setDate(diff));
     }
   }
 }
@@ -175,7 +131,7 @@ h1 {
 /* 单元格样式 */
 .schedule-table td {
     border: 1px solid #e0e0e0;
-    padding: 0;
+    padding: 8px;
     vertical-align: top;
     height: 60px;
     position: relative;
@@ -188,16 +144,6 @@ h1 {
     color: #666;
     width: 80px;
     min-width: 80px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.time-range {
-    font-size: 10px;
-    color: #888;
-    margin-top: 2px;
 }
 
 /* 课程项样式 */
@@ -209,14 +155,6 @@ h1 {
     margin-bottom: 4px;
     cursor: pointer;
     transition: all 0.2s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .course-item:hover {

@@ -4,11 +4,22 @@
 export const weekSchedule = 
 {
   "header": {
-    "dates": []
+    "startDate": "2023-10-20",
+    "dates": ["周一", "周二", "周三", "周四", "周五", "周六", "周日"]
   },
   "courses": [
     {
-      "id": "3195118",
+      "id": "3203217",
+      "name": "程序设计实验",
+      "info": "计算机科学与技术...",
+      "teacher": "郭雅秋",
+      "location": "公实407",
+      "timeSlot": "10-12",
+      "day": 1,
+      "color": "#AEEEEE"
+    },
+    {
+      "id": "3195121",
       "name": "高等数学(1)",
       "info": "计算机科学与技术...",
       "teacher": "张荣培",
@@ -18,7 +29,7 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3181791",
+      "id": "3181793",
       "name": "程序设计",
       "info": "计算机科学与技术...",
       "teacher": "李泓澍",
@@ -28,7 +39,7 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3156694",
+      "id": "3156695",
       "name": "体育(1)",
       "info": "计算机科学与技术...",
       "teacher": "沈苗",
@@ -38,7 +49,7 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3196845",
+      "id": "3196847",
       "name": "大学英语(1)",
       "info": "计算机科学与技术...",
       "teacher": "刘萱",
@@ -48,7 +59,27 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3195116",
+      "id": "3182018",
+      "name": "专业导论",
+      "info": "计算机科学与技术...",
+      "teacher": "滕少华",
+      "location": "教1-201",
+      "timeSlot": "06-07",
+      "day": 2,
+      "color": "#AEEEEE"
+    },
+    {
+      "id": "3182174",
+      "name": "军事理论",
+      "info": "计算机科学与技术...",
+      "teacher": "李强",
+      "location": "教1-207",
+      "timeSlot": "08-09",
+      "day": 2,
+      "color": "#AEEEEE"
+    },
+    {
+      "id": "3195119",
       "name": "高等数学(1)",
       "info": "计算机科学与技术...",
       "teacher": "张荣培",
@@ -58,7 +89,17 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3196846",
+      "id": "3182020",
+      "name": "专业导论",
+      "info": "计算机科学与技术...",
+      "teacher": "滕少华",
+      "location": "教1-201",
+      "timeSlot": "03-04",
+      "day": 2,
+      "color": "#AEEEEE"
+    },
+    {
+      "id": "3196848",
       "name": "大学英语(1)",
       "info": "计算机科学与技术...",
       "teacher": "刘萱",
@@ -68,7 +109,7 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3159849",
+      "id": "3159850",
       "name": "中国近现代史纲要",
       "info": "计算机科学与技术...",
       "teacher": "徐红",
@@ -78,7 +119,7 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3181792",
+      "id": "3181794",
       "name": "程序设计",
       "info": "计算机科学与技术...",
       "teacher": "李泓澍",
@@ -88,7 +129,17 @@ export const weekSchedule =
       "color": "#AEEEEE"
     },
     {
-      "id": "3195117",
+      "id": "3182245",
+      "name": "形势与政策",
+      "info": "计算机科学与技术...",
+      "teacher": "李嘉欣",
+      "location": "教1-207",
+      "timeSlot": "08-09",
+      "day": 3,
+      "color": "#AEEEEE"
+    },
+    {
+      "id": "3195120",
       "name": "高等数学(1)",
       "info": "计算机科学与技术...",
       "teacher": "张荣培",
