@@ -110,6 +110,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 | 数据/方法     | camelCase          | `todoItems`、`addTodo` |
 
 遵循这些规范能显著提升代码的可读性、一致性和可维护性，减少潜在的命名冲突问题。"# vue2-vscode-vuecli-brand1-frontEnd" 
+
+
 "# vue2-vscode-vuecli-brand1-frontEnd" 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
@@ -118,14 +120,19 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
+
 =======
+
 # onenote-website-of-schthings
 一站式查看需要用的schthings
+
 >>>>>>> dde1ad8a6c67a5e928345aa3708276f70f690b0a
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
-"# onenote-website-of-schthings"  git init git add . git commit -m "first commit" git branch -M main git remote add origin https://github.com/LinXi-ovo/onenote-website-of-schthings.git git push -u origin main
+"# onenote-website-of-schthings"
+>>>>>>> git init git add . git commit -m "first commit" git branch -M main git remote add origin https://github.com/LinXi-ovo/onenote-website-of-schthings.git git push -u origin main
+>>>>>>> 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
 "# onenote-website-of-schthings" 
