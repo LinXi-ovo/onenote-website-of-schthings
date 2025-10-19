@@ -1,0 +1,44 @@
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    background: #e0f7fa;
+    box-shadow: 2px 0 8px #ccc;
+    z-index: 999;
+    padding-top: 60px;
+    /* 顶部留白，避免内容贴顶 */
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-nav li {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.side-nav a {
+    text-decoration: none;
+    color: #2980b9;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px 0;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.side-nav a:hover {
+    background: #b2ebf2;
+}
+
+body {
+    margin-left: 130px;
+    /* 防止内容被侧边栏遮挡 */
+    margin-top: 20px;
+    /* 新增顶部margin，避免内容贴顶（原.nav占50px高度） */
+}

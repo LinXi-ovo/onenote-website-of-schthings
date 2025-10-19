@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my super HTML</title>
+    <link rel="stylesheet" href="./css/nav-side.css">
+
+    <style>
+        p {
+            color: blue;
+            font-size: 16px;
+        }
+
+        li:hover {
+            background-color: yellow;
+        }
+
+        .father .left-float-son {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+
+        .father .right-float-son {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            float: right;
+        }
+
+        .father {
+            width: 500px;
+            height: 300px;
+            border: 2px solid black;
+            overflow: hidden;
+        }
+
+        /* 已删除 .nav 相关的所有CSS样式（包括home和func的样式） */
+
+        .side-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 100%;
+            background: #e0f7fa;
+            box-shadow: 2px 0 8px #ccc;
+            z-index: 999;
+            padding-top: 60px;
+            /* 顶部留白，避免内容贴顶 */
+        }
+
+        .side-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .side-nav li {
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .side-nav a {
+            text-decoration: none;
+            color: #2980b9;
+            font-size: 1.1em;
+            display: block;
+            padding: 10px 0;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .side-nav a:hover {
+            background: #b2ebf2;
+        }
+
+        body {
+            margin-left: 130px;
+            /* 防止内容被侧边栏遮挡 */
+            margin-top: 20px;
+            /* 新增顶部margin，避免内容贴顶（原.nav占50px高度） */
+        }
+    </style>
+
+    <script>
+        console.log("这是一个内联脚本");
+    </script>
+    <script src="./js/myscript.js"></script>
+</head>
+
+<body>
+    <h1>Plan</h1>
+    <ul>
+        <li>TO do a multiSerach</li>
+        <li>TO do a URL jump list</li>
+        <li>TO do a panel menu</li>
+        <li><span> TO do a todo list</span></li>
+        <span>
+            <li> TO do a todo list</li>
+        </span>
+    </ul> <!-- 补充了缺失的闭合标签，修复语法错误 -->
+
+    <Input placeholder="请输入文本"></Input>
+    <br>
+    <a href="https://www.bilibili.com">跳转b站</a>
+    <hr>
+    <img src="./src/盒子模型.png" alt="图片无法显示" width="200px" height="200px">
+    <br>
+    <div class="father">
+        <div class="left-float-son">1</div>
+        <div class="right-float-son">2</div>
+        <div class="left-float-son">1</div>
+        <div class="right-float-son">2</div>
+        <div class="left-float-son">1</div>
+        <div class="right-float-son">2</div>
+        <div class="left-float-son">1</div>
+        <div class="right-float-son">2</div>
+        <div class="left-float-son">1</div>
+        <div class="right-float-son">2</div>
+        <div class="left-float-son">1</div>
+        <div class="right-float-son">2</div>
+    </div>
+
+    <!-- 已删除 .nav 导航栏的HTML结构（包括<h1>导航栏-固定定位</h1>标题和.nav容器） -->
+
+    <div class="side-nav">
+        <ul>
+            <li><a href="#">首页(test) </a></li>
+            <li><a href=".\课程信息\体育课成绩评定.html">课程要求信息</a></li>
+            <li><a href="#">功能2</a></li>
+            <li><a href="#">功能3</a></li>
+        </ul>
+    </div>
+
+    <script>
+        console.log("hellow world");
+        alert("欢迎您👏");
+    </script>
+</body>
+
+</html>
