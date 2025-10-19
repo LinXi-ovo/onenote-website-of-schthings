@@ -19,7 +19,8 @@
                     v-model="item.completed"
                 >
                 <!-- 根据完成状态添加样式 -->
-                <span :class="{ completed: item.completed }">{{ item.text }}</span>
+                <span v-if="!item.isLink" :class="{ completed: item.completed }">{{ item.text }}</span>
+                <a v-else :href="item.url" target="_blank" :class="{ completed: item.completed }">{{ item.text }}</a>
                 <!-- 删除按钮 -->
                 <button @click="deleteItem(index)" class="delete-btn">删除</button>
             </li>
@@ -36,7 +37,7 @@ export default {
             todoItems: [
                 { text: "吃饭", completed: false },
                 { text: "睡觉", completed: false },
-                { text: "去github给开发者点一颗star 💗", completed: false }
+                { text: "去github给开发者点一颗star 💗", completed: false, isLink: true, url: "https://github.com/LinXi-ovo/onenote-website-of-schthings" }
             ]
         };
     },
@@ -104,7 +105,7 @@ li {
     border-radius: 4px;
 }
 
-li span {
+li span, li a {
     margin: 0 10px;
     flex: 1;
 }
@@ -112,6 +113,15 @@ li span {
 .completed {
     text-decoration: line-through;
     color: #888;
+}
+
+li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: underline;
 }
 
 .delete-btn {

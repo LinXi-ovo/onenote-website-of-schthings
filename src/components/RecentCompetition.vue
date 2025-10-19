@@ -65,6 +65,10 @@
             </div>
             <div class="notice-content" v-show="showExam" v-html="competitions[1].content"></div>
         </div>
+
+        <div class="feedback-notice">
+            <p>如果信息不全，您可以<a href="#/contact">点击联系我们</a>跟我反馈，我很乐意更新上来，也感谢您的贡献！</p>
+        </div>
     </div>
 </template>
 
@@ -296,5 +300,25 @@ ul, ol {
 /* 添加过渡效果 */
 .notice-content {
     transition: all 0.3s ease;
+}
+
+/* 反馈提示样式 */
+.feedback-notice {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.feedback-notice a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.feedback-notice a:hover {
+    text-decoration: underline;
 }
 </style>

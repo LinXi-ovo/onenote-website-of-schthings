@@ -4,7 +4,7 @@
       <div class="logo">
         <h2>学术资源中心</h2>
       </div>
-      <nav class="nav-links">
+      <nav class="nav-links" :class="{ 'active': isMenuOpen }">
         <a
           v-for="link in links"
           :key="link.id"
@@ -15,7 +15,7 @@
           {{ link.text }}
         </a>
       </nav>
-      <div class="menu-toggle" @click="toggleMenu">
+      <div class="menu-toggle" :class="{ 'active': isMenuOpen }" @click="toggleMenu">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
