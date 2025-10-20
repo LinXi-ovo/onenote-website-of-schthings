@@ -43,6 +43,10 @@
     <RecentCompetition
       v-show="currentPage=='RecentCompetition'"
     ></RecentCompetition>
+
+    <FriendlyNotice
+      v-show="currentPage=='FriendlyNotice'"
+    ></FriendlyNotice>
   </div>
 </template>
 
@@ -63,7 +67,8 @@ export default {
 
     ClubRecruit: () => import('./components/ClubRecruit.vue'),
     ClassSchedule: () => import('./components/ClassSchedule.vue'),
-    RecentCompetition: () => import('./components/RecentCompetition.vue')
+    RecentCompetition: () => import('./components/RecentCompetition.vue'),
+    FriendlyNotice: () => import('./components/FriendlyNotice.vue')
   },
   data() {
     return {

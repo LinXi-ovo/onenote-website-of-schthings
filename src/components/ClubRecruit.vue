@@ -31,6 +31,7 @@ export default {
                 <p>❗️未入选的同学可以根据我们的培养方案进行学习，今年11月～明年6月可投长期招新简历。</p>
                 <p>邮箱：aita@ai.email.cn</p>
                 <p>✅AITA培养方案暨自学指南：<a href="https://z0abki9lxvn.feishu.cn/docx/Rjzjd4CzqoYZ2NxVygecR3Dtn2b?from=from_copylink" target="_blank">点击查看</a></p>
+                
             `
         }
     },
